@@ -4,3 +4,5 @@
 *~
 *#
 .#*
+# Excluding sample files
+data/
