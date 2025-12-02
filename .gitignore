@@ -4,5 +4,6 @@
 *~
 *#
 .#*
-# Excluding sample files
+# Excluding sample files so that I don't accidentally breach copyright
 data/
+
