@@ -21,3 +21,14 @@
                  for col from 0
                  do (setf (aref result row col) (funcall fn c)))
         finally (return result)))
+
+(defun rotate-string (str)
+  (let* ((lines (str:lines str))
+         (line-len (length (first lines))))
+    (loop for line in (rest lines)
+          do (assert (= (length line) line-len)))
+    (str:join *newline*
+              (loop for i below line-len
+                    collect (coerce (loop for line in lines
+                                          collect (aref line i))
+                                    'string)))))

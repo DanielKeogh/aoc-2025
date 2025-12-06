@@ -21,7 +21,7 @@
 
 (defun day5-problem2 ()
   (let* ((ranges (parse-ingredients "data/day5_sample.txt"))
-         (s (sort ranges (lambda (a b) (< (car a) (car b))))))
+         (s (sort ranges #'< :key #'car)))
     (let ((last-start (caar s))
           (last-end (cadar s))
           (r (list)))
