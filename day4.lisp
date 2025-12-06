@@ -3,16 +3,7 @@
 (in-package :aoc-2025)
 
 (defun read-day4-map (file)
-  (loop with lines = (str:lines (alexandria:read-file-into-string (get-file-path file)))
-        with result = (make-array (list (length lines) (length (car lines)))
-                                  :element-type 'boolean
-                                  :initial-element nil)
-        for line in lines
-        for row from 0
-        do (loop for c across line
-                 for col from 0
-                 do (setf (aref result row col) (char-equal c #\@)))
-        finally (return result)))
+  (read-2d-array file (lambda (c) (char-equal c #\@)) :type 'boolean))
 
 (defun forklift-accessible (map row col)
   (and (aref map row col)
