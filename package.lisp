@@ -1,4 +1,6 @@
 ;;;; package.lisp
 
 (defpackage #:aoc-2025
-  (:use #:cl))
+  (:use #:cl :arrows)
+  (:local-nicknames (:graph :com.danielkeogh.graph)
+                    (:algs :com.danielkeogh.graph.algorithms)))

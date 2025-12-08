@@ -3,7 +3,7 @@
 (in-package :aoc-2025)
 
 (defun day7-problems ()
-  (let ((map (read-day7 (read-2d-array "data/day7_input.txt" #'identity)))
+  (let ((map (read-2d-array "data/day7_input.txt" #'identity))
         (problem1-solution 0))
     (loop for row from 0 below (1- (array-dimension map 0)) do
       (loop for col from 0 below (array-dimension map 1)
