@@ -5,7 +5,7 @@
   :author "Daniel Keogh"
   :license "None"
   :serial t
-  :depends-on (:str :alexandria :arrows :com.danielkeogh.graph)
+  :depends-on (:str :alexandria :arrows :com.danielkeogh.graph :group-by)
   :components ((:file "package")
                (:file "utils")
                (:file "day1")
@@ -15,4 +15,5 @@
                (:file "day5")
                (:file "day6")
                (:file "day7")
-               (:file "day8")))
+               (:file "day8")
+               (:file "day9")))
