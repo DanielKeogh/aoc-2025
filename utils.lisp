@@ -32,3 +32,6 @@
                     collect (coerce (loop for line in lines
                                           collect (aref line i))
                                     'string)))))
+
+(defun min-max (&rest args)
+  (sort args #'<))
