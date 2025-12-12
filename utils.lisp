@@ -35,3 +35,11 @@
 
 (defun min-max (&rest args)
   (sort args #'<))
+
+(defun rotate-array (arr)
+  (let ((copy (alexandria:copy-array arr))
+        (width (array-dimension arr 0)))
+    (loop for r below width do
+      (loop for c below width do
+        (setf (aref copy (- width c 1) r) (aref arr r c))))
+    copy))
